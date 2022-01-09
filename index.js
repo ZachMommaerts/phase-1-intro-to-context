@@ -15,10 +15,30 @@ const createEmployeeRecords = (array) => {
     });
 }
 
-const createTimeInEvent = (employeeRecord, dateTime) => {
+const createTimeInEvent = (employee, dateTime) => {
+    let [date, hour] = dateTime.split(' ')
 
+    employee.timeInEvents.push({
+        type: "TimeIn",
+        hour: parseInt(hour, 10),
+        date,
+    })
+
+    return employee
 }
 
-const createTimeOutEvent = (employeeRecord, dateTime) => {
+const createTimeOutEvent = (employee, dateTime) => {
+    let [date, hour] = dateTime.split(' ')
+
+    employee.timeOutEvents.push({
+        type: "TimeOut",
+        hour: parseInt(hour, 10),
+        date,
+    })
+
+    return employee
+}
+
+const hoursWorkedOnDate = (employeeRecord, dateTime) => {
 
 }
