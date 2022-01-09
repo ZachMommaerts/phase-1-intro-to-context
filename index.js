@@ -10,7 +10,15 @@ const createEmployeeRecord = (row) => {
 }
 
 const createEmployeeRecords = (array) => {
-    return array.forEach(row => {
-        createEmployeeRecord(row)
+    return array.map(row => {
+        return createEmployeeRecord(row)
     });
+}
+
+const createTimeInEvent = (employeeRecord, dateTime) => {
+
+}
+
+const createTimeOutEvent = (employeeRecord, dateTime) => {
+
 }
