@@ -1,1 +1,3 @@
-// Your code here
+const createEmployeeRecord = (array) => {
+    array.firstName = array[0];
+}
